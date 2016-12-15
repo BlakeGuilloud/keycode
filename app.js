@@ -1,9 +1,7 @@
-console.log('hello');
-
 function renderCode(event) {
   const code = event.keyCode;
-  const key = event.code;
-  console.log('event', event);
+  let key = event.key;
+  if (key === " ") key = 'Space';
 
   document.getElementById('code').innerHTML = code;
   document.getElementById('key').innerHTML = key;
